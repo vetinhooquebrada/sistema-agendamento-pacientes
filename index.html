@@ -1,73 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Agendamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Médica</title>
 
-<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <h1>🏥 Sistema de Agendamento dee Pacientes</h1>
+    <h1>📅 Agenda Médica</h1>
+
+    <p class="subtitulo">
+        Gerencie consultas de forma rápida e organizada
+    </p>
 
     <div class="card">
 
         <div class="form-grid">
 
             <div>
-                <label>Paciente</label>
-                <input type="text" id="nome">
+                <label for="nome">Paciente</label>
+                <input type="text" id="nome" placeholder="Nome do paciente">
             </div>
 
             <div>
-                <label>Telefone</label>
-                <input type="text" id="telefone">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(17) 99999-9999">
             </div>
 
             <div>
-                <label>Data</label>
+                <label for="data">Data</label>
                 <input type="date" id="data">
             </div>
 
             <div>
-                <label>Horário</label>
+                <label for="horario">Horário</label>
                 <input type="time" id="horario">
             </div>
 
         </div>
 
-        <br>
-
         <button onclick="adicionarConsulta()">
-            Agendar Consulta
+            ➕ Agendar Consulta
         </button>
 
     </div>
 
     <div class="card">
 
-        <h2>Consultas Agendadas</h2>
+        <h2>📅 Agenda Semanal</h2>
 
-        <br>
+        <div class="agenda-semanal">
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Paciente</th>
-                    <th>Telefone</th>
-                    <th>Data</th>
-                    <th>Horário</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
+            <div class="dia">
+                <h3>SEGUNDA</h3>
+                <div id="segunda"></div>
+            </div>
 
-            <tbody id="listaConsultas">
-            </tbody>
+            <div class="dia">
+                <h3>TERÇA</h3>
+                <div id="terca"></div>
+            </div>
 
-        </table>
+            <div class="dia">
+                <h3>QUARTA</h3>
+                <div id="quarta"></div>
+            </div>
+
+            <div class="dia">
+                <h3>QUINTA</h3>
+                <div id="quinta"></div>
+            </div>
+
+            <div class="dia">
+                <h3>SEXTA</h3>
+                <div id="sexta"></div>
+            </div>
+
+        </div>
 
     </div>
 
